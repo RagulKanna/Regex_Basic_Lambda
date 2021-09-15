@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class UserDetails extends Regex {
     public static Scanner scan = new Scanner(System.in);
-    public static String first_name, last_name, mail_ID, phone_number, password, check_mail;
+    public static String first_name, last_name, mail_ID, phone_number, password;
 
     public static void main(String[] args) {
         UserDetails details = new UserDetails();
@@ -12,6 +12,7 @@ public class UserDetails extends Regex {
         details.lastname();
         details.mail();
         details.phonenumber();
+        details.password();
 
     }
 
@@ -41,4 +42,10 @@ public class UserDetails extends Regex {
         Regex.phonenumber(phone_number);
     }
 
+    public static void password() {
+        System.out.println("\nEnter the password with following rules");
+        System.out.println("1. minimum 8 characters");
+        password = scan.nextLine();
+        Regex.password(password);
+    }
 }
