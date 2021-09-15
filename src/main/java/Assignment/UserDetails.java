@@ -11,6 +11,7 @@ public class UserDetails extends Regex {
         details.firstname();
         details.lastname();
         details.mail();
+        details.phonenumber();
 
     }
 
@@ -33,4 +34,11 @@ public class UserDetails extends Regex {
         mail_ID = scan.next();
         Regex.mail(mail_ID);
     }
+
+    public static void phonenumber() {
+        System.out.println("\nEnter the phone number with country code and leave gap between them (E.g:91 9876543210):");
+        phone_number = scan.nextLine();
+        Regex.phonenumber(phone_number);
+    }
+
 }

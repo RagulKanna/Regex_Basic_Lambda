@@ -33,4 +33,16 @@ public class Regex {
             UserDetails.mail();
         }
     }
+
+    public static void phonenumber(String phonenumber) {
+        regex = "^[0-9]{2}\\s{1}[0-9]{10}$";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(phonenumber);
+        if (matcher.matches()) {
+            System.out.println("\nYour phone number " + phonenumber + " is in correct format.");
+        } else {
+            System.out.println("\nYour phone number is not in format.");
+            UserDetails.phonenumber();
+        }
+    }
 }
