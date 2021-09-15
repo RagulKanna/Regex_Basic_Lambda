@@ -44,7 +44,7 @@ public class UserDetails extends Regex {
 
     public static void password() {
         System.out.println("\nEnter the password with following rules");
-        System.out.println("1. minimum 8 characters\n2.At Least one uppercase");
+        System.out.println("1. minimum 8 characters\n2.At Least one uppercase\n3.At Least one numerical");
         password = scan.nextLine();
         Regex.password(password);
     }
